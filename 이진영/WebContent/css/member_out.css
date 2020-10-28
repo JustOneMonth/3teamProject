@@ -1,0 +1,66 @@
+.box {
+    width: 90%;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.margin_auto {
+    margin: 0 auto;
+}
+
+.out_txt {
+    width: 100%;
+    text-align: center;
+}
+
+.comment {
+    width: 600px;
+    height: 150px;
+    text-align: center;
+}
+
+.reason_box {
+    width: 80%;
+    height: 30%;
+    margin-top: 10px;
+    border-top: 2px solid lightgray;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+.reason_table1 {
+    text-align: center;
+    background-color: #eeeeee;
+}
+
+.write_box {
+    width: 98%;
+    height: 200px;
+    border: 1px solid lightgray;
+    margin-left: 5px;
+    text-align: start;
+    word-break: break-all;
+}
+
+.btn_box {
+    width: 50%;
+    height: 50px;
+    text-align: center;
+}
+.out_btn {
+    width: 120px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+.cancel_btn {
+    margin-top: 10px;
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    color: black;
+}
