@@ -1,0 +1,45 @@
+.box {
+    width: 1000px;
+    margin-left: 17%;
+}
+
+.no_margin {
+    margin-right: 17%;
+}
+
+.search_box {
+    margin-left: 100px;
+    margin-top: 70px;
+}
+
+.order_lookup {
+    margin-left: 100px;
+    margin-top: 5%;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.category {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.post {
+    table-layout: fixed;
+    text-align: center;
+    margin-top: 10px;
+}
+.color_gray {
+    background-color: #e0e0e0;
+}
+.color_lightgray {
+    background-color: #eeeeee;
+}
