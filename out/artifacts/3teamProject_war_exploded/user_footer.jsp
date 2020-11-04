@@ -24,9 +24,9 @@
         <ul class="wrap2">
             <li class="tit">BANKING INFO</li>
             <li class="line"></li>
-            <li class="bank"><img src="img/kb_bk.gif"> 366901 - 04 - 153821</li>
-            <li class="bank"><img src="img/nh_bk.gif"> 100056 - 55 - 005031</li>
-            <li class="bank"><img src="img/wr_bk.gif"> 1005 - 302 - 421987</li>
+            <li class="bank"><img src="./images/kb_bk.gif"> 366901 - 04 - 153821</li>
+            <li class="bank"><img src="./images/nh_bk.gif"> 100056 - 55 - 005031</li>
+            <li class="bank"><img src="./images/wr_bk.gif"> 1005 - 302 - 421987</li>
             <li class="bank"><img src="http://img.just-one.co.kr/shopping_mall/mainimage/sh_bk.gif"> 100 - 032 - 135166
             </li>
             <li class="name">예금주 : (주)제이오진</li>
