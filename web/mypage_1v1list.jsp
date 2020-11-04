@@ -109,7 +109,7 @@
                                     <div class="tb-center">1</div>
                                 </td>
                                 <td>
-                                    <div class="tb-center"><img src="./img/default.gif" alt="내가쓴글"/>
+                                    <div class="tb-center"><img src="./images/default.gif" alt="내가쓴글"/>
                                 </td>
                                 <td>
                                     <div class="tb-left"><a href="mypage_1v1watch.jsp">[상품문의] 사이즈 문의</a></div>
