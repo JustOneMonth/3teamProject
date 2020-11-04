@@ -139,7 +139,7 @@ li {
     color: #333;
     font-family: 'Malgun Gothic', Lato, monospace, Corbel, Dotum, AppleGothic, Helvetica, sans-serif;
 }
-ul li{display: inline-block;}
+/*ul li{display: inline-block;}*/
 /* 탑 메뉴 */
 #headerTopCont {
     height: 90px;

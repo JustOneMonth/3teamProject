@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>저스트원: 주문서</title>
     <link rel="stylesheet" href="./css/orderlist.css?ver=1">
-    <%@include file="user_header.jsp"%>
-    <script src="./jq/orderlist.js"></script>
+    <script src="./js/jquery-1.10.2.js" />
+    <script src="./js/orderlist.js"/>
     <script>
         /*
         * 구현할 기능
         * 1. 주문자 정보에서 이메일 입력불가 처리. 입력하려면 직접입력 선택해야만 하게.
-        * 2. 배송지 선택 체크박스 처리, 최근 배송지 css 수정
         * 3. 주소 검색 api 연동
         * 4. 체크박스, 빈칸 검색하고 주문하기 버튼 클릭가능하게 처리
         * */
     </script>
+    <%@include file="user_header.jsp"%>
 </head>
 <body>
 <div class="contentWrap-order">
@@ -68,6 +68,7 @@
                         </table>
                     </div>
                     <h3 class="tit-cart2">주문자정보</h3>
+<%--                    회원 정보(이름, 이메일, 전화번호 불러와서 세팅)                  --%>
                     <div class="table-order">
                         <table>
                             <colgroup>
@@ -88,12 +89,12 @@
                                 <td><input type="text" maxlength="20" class="MS_input_txt box"><span>@</span>
                                     <span><input type="text" id="emailbox" value="naver.com" class="box"
                                                  style="margin-top: 3px; display: inline-block;"></span>
-                                    <select name="emailsel" id="emailsel" class="MS_email" onchange="selectEmail(this)">
+                                    <select name="emailsel" id="emailsel" class="MS_email" onchange="selectEmail(this)" readonly="true">
                                         <option value="naver.com">naver.com</option>
                                         <option value="gmail.com">gmail.com</option>
                                         <option value="hotmail.com">hotmail.com</option>
                                         <option value="nate.com">nate.com</option>
-                                        <option value="direct">직접입력</option>
+                                        <option value="direct" id="direct">직접입력</option>
                                     </select>
                                 </td>
                             </tr>
@@ -142,6 +143,7 @@
                         </table>
                     </div>
                     <h3 class="tit-cart2">배송정보
+<%--                        체크시 배송정보 이름, 연락처 항목에 값 세팅--%>
                         <label> <input type="checkbox" onclick="copydata">위 정보와 같음</label>
                     </h3>
                     <div class="table-order">
@@ -162,7 +164,7 @@
                             </tr>
                             <tr>
                                 <th>
-                                    <div class="txt-l">연락처1</div>
+                                    <div class="txt-l">연락처 1</div>
                                 </th>
                                 <td>
                                     <select name="emergency11" id="emergency2" class="MS_tel box">
@@ -224,10 +226,9 @@
                                     <div class="txt-l">배송지 선택</div>
                                 </th>
                                 <td colspan="3">
-                                    <input type="radio"><span>자택</span>
-                                    <input type="radio"><span>회사</span>
-                                    <input type="radio"><span>신규 배송지</span>
-                                    <a href="">최근배송지</a>
+                                    <input type="radio" name="receive_place"><span>자택</span>
+                                    <input type="radio" name="receive_place"><span>회사</span>
+                                    <input type="radio" name="receive_place"><span>신규 배송지</span>
                                 </td>
                             </tr>
                             <tr>

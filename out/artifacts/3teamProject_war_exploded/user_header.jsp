@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/main_1.css">
     <link rel="stylesheet" href="./css/style_1.css">
-    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/jq1.js"></script>
 </head>
 <header>
@@ -62,10 +62,6 @@
         <!-- 회원가입/로그인 -->
         <div class="hdGnb">
             <ul>
-                <!--li><a href="http://www.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_KR.gif"></a></li>
-                <li><a href="http://en.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_EN.gif"></a></li>
-                <li><a href="http://cn.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_CN.gif"></a></li>
-                <li><a href="http://jp.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_JP.gif"></a></li-->
                 <li class="hdJoin"><a href="https://www.justone.co.kr/shop/idinfo.html">회원가입</a><span class="bonus"></span></li>
                 <li><a href="https://www.justone.co.kr/shop/member.html?type=login">로그인</a></li>
                 <li><a href="/shop/basket.html">장바구니(<span id="user_basket_quantity" class="user_basket_quantity">0</span>)</a></li>
@@ -98,7 +94,7 @@
                         <div class="boxAllCate displaynone" >
                             <div class="allCateClose">
                                 <div class="trans-line is-open">
-                                    <img src="./img/getout.png" alt="나가기" width="20"height="20">
+                                    <img src="./images/getout.png" alt="나가기" width="20"height="20">
                                 </div>
                             </div>
 
@@ -257,14 +253,14 @@
                                     <div class="search sch">
                                         <form action="/shop/shopbrand.html" method="post" name="search" autocomplete="off">                                <fieldset>
                                             <legend>상품 검색 폼</legend>
-                                            <input name="search" onkeydown="CheckKey_search();" value="" class="MS_search_word">                                    <a href="javascript:search_submit();" class="schBtn"><img src="/img/header_sch_btn.jpg"></a>
+                                            <input name="search" onkeydown="CheckKey_search();" value="" class="MS_search_word">                                    <a href="javascript:search_submit();" class="schBtn"><img src="/images/header_sch_btn.jpg"></a>
                                         </fieldset>
                                         </form>
                                     </div>
 
                                     <div class="keywordWrap" style="display: none;">
                                         <div class="schKeyword">
-                                            <a href="javascript:void(0);" class="schPopClose"><img src="/design/jojean/phps/common/search_pop_close.png"></a>
+                                            <a href="javascript:void(0);" class="schPopClose"><img src="/images/search_pop_close.png"></a>
                                             <h6 id="schPop" class="schActive">실시간 검색어</h6>
 
                                             <!-- 인기검색어 검색어 등록 -->
@@ -295,8 +291,8 @@
 
                                         <!-- 인기검색어 레이어 이미지배너 -->
                                         <div class="schPopImg">
-                                            <a href="/shop/shopbrand.html?xcode=048&amp;type=N&amp;mcode=004"><img src="/design/jojean/phps/common/search_bn01.jpg"></a>
-                                            <a href="/shop/shopbrand.html?xcode=065&amp;type=P"><img src="/design/jojean/phps/common/search_bn02.jpg"></a>
+                                            <a href="/shop/shopbrand.html?xcode=048&amp;type=N&amp;mcode=004"><img src="/images/search_bn01.jpg"></a>
+                                            <a href="/shop/shopbrand.html?xcode=065&amp;type=P"><img src="/images/search_bn02.jpg"></a>
                                         </div>
                                         <!-- 인기검색어 레이어 이미지배너 -->
                                     </div>

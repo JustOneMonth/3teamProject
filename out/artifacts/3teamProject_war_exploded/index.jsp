@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  톰캣이 아주 잘 작동되고 있읍니다.
   </body>
 </html>
