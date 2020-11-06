@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main_1.css">
+    <link rel="stylesheet" href="./css/style_1.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/best.css">
+    <link rel="stylesheet" href="./css/item.css">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="./jq/bestjq.js"></script>
+    <script src="./jq/jq1.js"></script>
+    <script src="./jq/item.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    
+
+
+</head>
+<body>
+    <header>
+        <div id="headerTop">
+            <!-- 로고 -->    
+            <h1 class="tlogo"><a href="./main.html">저스트원</a></h1>
+            <!-- //로고 -->
+            <!-- sns -->
+            <div class="hdShare">
+                <div id="langLink">
+                    <style>
+                        #langLink {position:relative; top:0; left:0;}
+                        .global_lang {cursor:pointer;}
+                        .global_lang_content {display:none; position:absolute; top:25px; left:0; z-index: 1000; background-color:#fff; border:1px solid #dbdbdb; padding:8px 5px 0 5px;}
+                        .global_lang_content li {float:none!important; }
+                        .global_lang_content li a {background:none!important; text-indent:0!important; width:auto!important;}
+                        .global_lang_content li a img {margin-right:7px;}
+                    </style>
+                    <script>
+                        $(function(){
+                            $(".global_lang").click(function(){
+                                // var _this = $(this);
+                                $(".global_lang_content").slideToggle('fast', function(){
+                                    if ( $(this).is(':visible'))
+                                    {
+                                        $(".global_lang span").text('▲');
+                                    }else{
+                                        $(".global_lang span").text('▼');	
+                                    }	
+                                });
+                            });
+                        });
+                    </script>
+
+                    <div class="global_lang">Global <span>▼</span></div>	
+                    <ul class="global_lang_content">
+                        <li class="lang"><a href="//justone.co.kr/" target="_blank"><img src="http://en.justone.co.kr/Common/img/lang_icon_KR.gif"></a></li>
+                        <li class="lang"><a href="//www.justonemall.jp"><img src="http://en.justone.co.kr/Common/img/lang_icon_JP.gif"></a></li>
+                        <li class="lang"><a href="//en.justone.co.kr"><img src="http://en.justone.co.kr/Common/img/lang_icon_EN.gif"></a></li>
+                        <li class="lang"><a href="//cn.justone.co.kr"><img src="http://en.justone.co.kr/Common/img/lang_icon_CN.gif"></a></li>
+                        <li class="lang"><a href="//www.justonemall.tw"><img src="http://en.justone.co.kr/Common/img/lang_icon_TW.gif"></a></li>
+                    </ul>
+                </div>
+
+                    <li><a href="javascript:CreateBookmarkLink('http://www.justone.co.kr', '여성의류 쇼핑몰 저스트원!!');" class="ic_bm" target="_blank">즐겨찾기</a></li>
+                    <li><a href="https://story.kakao.com/ch/justone" class="ic_ks" target="_blank">카카오스토리</a></li>
+
+                    <li><a href="https://www.instagram.com/justone_korea/" class="ic_in" target="_blank">인스타그램</a></li>
+                    <li><a href="https://itunes.apple.com/kr/app/%EA%B8%B0%EB%B6%84%EC%A2%8B%EC%9D%80-%EB%A1%9C%EB%A7%A8%ED%8B%B1-%EC%BA%90%EC%A3%BC%EC%96%BC-%EC%97%AC%EC%84%B1%EC%9D%98%EB%A5%98-%EC%87%BC%ED%95%91%EB%AA%B0-%EC%A0%80%EC%8A%A4%ED%8A%B8%EC%9B%90/id897007279?l=en&amp;mt=8" class="ic_as" target="_blank">애플스토어</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.looket.justone&amp;hl=ko" class="ic_gs" target="_blank">구글스토어</a></li>
+                
+            </div>
+            <!-- //sns -->
+            <!-- 회원가입/로그인 -->
+            <div class="hdGnb">
+                <ul>
+                    <!--li><a href="http://www.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_KR.gif"></a></li>
+                    <li><a href="http://en.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_EN.gif"></a></li>
+                    <li><a href="http://cn.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_CN.gif"></a></li>
+                    <li><a href="http://jp.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_JP.gif"></a></li-->
+                                    <li class="hdJoin"><a href="./rgist_simpel.html">회원가입</a><span class="bonus"></span></li>
+                    <li><a href="./login.html">로그인</a></li>
+                                    <li><a href="./shop/basket.html">장바구니(<span id="user_basket_quantity" class="user_basket_quantity">0</span>)</a></li>
+                    <li class="off"><a href="https://www.justone.co.kr/shop/confirm_./rgist_simpel.html?type=myorder">주문조회</a></li>
+                    <li><a href="https://www.justone.co.kr/shop/member.html?type=mynewmain">마이페이지</a></li>
+                    <li class="off"><a href="./board/board.html?code=jojean_board12">리뷰보기</a></li>
+                    <li><a href="./shop/faq.html">고객센터</a></li>
+                </ul>
+            </div>
+            <!-- //회원가입/로그인 -->
+
+            
+        </div>
+        <div id="headerNavWrap">
+            <div id="headerNavArea" class="">
+                <div class="headerNav">
+                    <div id="allCateArea">
+                    
+                        <div class="fixLogo"><a href="./index.html"><img src="./design/jojean/phps/common/tlogo.png"></a></div>
+                        
+                    <!-- 상단 메뉴 -->
+                    <div class="navArea subListWrap">
+                        <ul>
+                            <li><a href="best.html">BEST20</a></li>    
+                            <li><a href="./OUTER.html" vaule="1">OUTER</a>    
+                                <p><a href="./OUTER.html">자켓</a><a href="./OUTER.html">가디건</a><a href="./OUTER.html">코트</a><a href="./OUTER.html">집업/점퍼</a><a href="./OUTER.html">패딩</a></p>
+                                </li>
+                            <li><a href="./PANTS.html"vaule="2">PANTS</a>    
+                                <p><a href="./PANTS.html">청바지</a><a href="./PANTS.html">슬랙스</a><a href="./PANTS.html">면바지</a><a href="./PANTS.html">짧은바지</a></p>
+                                </li>
+                            <li><a href="./OPS.html"vaule="3">OPS/SKIRT</a>
+                                <p><a href="./OPS.html">원피스</a><a href="./OPS.html">스커트</a><a href="./OPS.html">치마바지</a></p></li>
+                            <li><a href="./CARDIGAN.html"vaule="4">KNIT/CARDIGAN</a>
+                                <p><a href="./CARDIGAN.html">니트</a><a href="./CARDIGAN.html">가디건</a><a href="./CARDIGAN.html">조끼</a></p></li>
+                            <li><a href="./SHOES.html"vaule="5">BAG/SHOES/ACC</a>
+                                <p><a href="./SHOES.html">신발</a><a href="./SHOES.html">가방</a><a href="./SHOES.html">머플러/스카프</a><a href="./SHOES.html">모자</a>
+                                    <a href="./SHOES.html">주얼리</a><a href="./SHOES.html">기타</a></p></li>
+                            <li><a href="./LEGGINGS.html"vaule="6">LEGGINGS/SOCKS</a>
+                                <p><a href="./LEGGINGS.html">레깅스/스타킹</a><a href="./LEGGINGS.html">삭스</a><a href="./LEGGINGS.html">이너웨어</a><p>
+                                </li>
+                            <li class="search_wrap last">
+                                <div class="search sch">
+                                    <form action="./shop/shopbrand.html" method="post" name="search" autocomplete="off">                                <fieldset>
+                                        <legend>상품 검색 폼</legend>
+                                        <input name="search" onkeydown="CheckKey_search();" value="" class="MS_search_word">                                    <a href="javascript:search_submit();" class="schBtn"><img src="./img/header_sch_btn.jpg"></a>
+                                    </fieldset>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    <!-- //상단 메뉴 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+        <main >
+            <div class="item-body">
+                <div class="item-list ">
+                    <div id="item-pic" class="item1">
+                        <img src="./img/040003001554.jpg" alt="">
+                    </div>
+                    <div id="item-ex" class="item1">
+                        <p>상품명 : <em></em></p>
+                        <p>상품 사이즈 : <em></em></p>
+                        <ul>
+                            <li>판매가<em>444000원</em></li>
+                            <li>적립금<em>440원</em></li>
+                            <li>색상&ensp;&ensp;
+                                <select class="item_option">
+                                    <option value="#">-- 옵션 선택 --</option>
+                                    <option ></option>
+                                    <option ></option>
+                                    <option ></option>
+                                    <option ></option>
+                                </select>
+                            </li>
+                            <li>사이즈
+                                <select class="item_option">
+                                    <option value="#">-- 옵션 선택 --</option>
+                                    <option ></option>
+                                    <option ></option>
+                                    <option ></option>
+                                    <option ></option>
+                                </select>
+                            </li>
+                        </ul>
+                        <p id="price">총 상품 금액 <em>0</em>원</p>
+                        <div id="buy">
+                            <a href=""><img src="./img/iconfinder_check-fill_3017954.png" alt=""><em>바로구매</em></a>
+                        </div>
+                        <div id="sh_basket">
+                            <a href=""><img src="./img/iconfinder_Basket_2_2205959.png" alt="">장바구니</a>
+                        </div>
+                    </div>
+                    <div class="both"></div>
+                    <div class="item_rmc">
+                        <div class="item_rmcontrol" id="up_info">
+                            <a href=""><span> 상품 상세 정보</span></a>
+                        </div>
+                        <div class="item_rmcontrol ex">
+                            <a href="#ex">상품 후기 (<em>1111</em>)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-list main_list">
+                    <img src="http://img.just-one.co.kr/shopping_mall/product/2010/DA21266/KU-201022DA21266_02.jpg" alt=""><br>
+                    <img src="http://img.just-one.co.kr/shopping_mall/product/2010/DA21266/KU-201022DA21266_c.jpg" alt=""><br>
+                    <img src="http://img.just-one.co.kr/shopping_mall/product/2010/DA21266/KU-201022DA21266_m.jpg" alt=""><br>
+                    <div class="min_list">
+                        <img src="//assets2.cre.ma/p/just-one-co-kr/fit_products/00/00/00/94/63/sample_image/0d1a3c845dddedd3.png" alt="">
+                    </div>
+                    <table class="fit_product_basic__size_table
+                    fit_product_basic__size_table--multi-size
+                    " border="0" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr class="fit_product_basic__size_table_title_row">
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            사이즈
+                            </td>
+                        
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            어깨단면<br>(shoulder)
+                            </td>
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            가슴둘레<br>(chest)
+                            </td>
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            밑단둘레<br>(hem)
+                            </td>
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            암홀둘레<br>(armhole)
+                            </td>
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            소매길이<br>(sleeve)
+                            </td>
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            소매통<br>(sleeve width)
+                            </td>
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            소매밑단<br>(cuffs)
+                            </td>
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            총장<br>(length)
+                            </td>
+                        
+                            <td class="fit_product_basic__size_table_title_col" style="width: 10.0%">
+                            끈길이<br>(strap length)
+                            </td>
+                        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr class="fit_product_basic__size_table_content_row">
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                FREE
+                            </td>
+                            
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                53 
+                            </td>
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                142 
+                            </td>
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                138 
+                            </td>
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                74 
+                            </td>
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                50 
+                            </td>
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                52 
+                            </td>
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                30 
+                            </td>
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                78.5 
+                            </td>
+                            
+                            <td class="fit_product_basic__size_table_content_col" style="width: 10.0%">
+                                152 
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                <div class="fit_product_basic__size_unit">단위: cm</div>
+                <div class="fit_product_basic__size_description">- 측정 위치, 방법에 따라 단면 1~2cm, 둘레 2~4cm의 오차가 있을 수 있습니다.<br>- 니트의 경우, 보관 방법에 따라 3~7cm정도 길이감이 달라질 수 있습니다.</div>
+                <div class="fit_product_basic__info">
+                    <div class="fit_product_basic__info_title">
+                        
+                            PRODUCT INFO
+                        
+                        </div>
+                        <div class="fit_product_basic__info_content">
+                        
+                            <div class="fit_product_basic__info_item">
+                            <span class="fit_product_basic__info_key">컬러</span> :
+                            <span class="fit_product_basic__info_value">라이트베이지,다크베이지,브라운,블랙</span>
+                            </div>
+                        
+                            <div class="fit_product_basic__info_item">
+                            <span class="fit_product_basic__info_key">사이즈</span> :
+                            <span class="fit_product_basic__info_value">FREE</span>
+                            </div>
+                        
+                            <div class="fit_product_basic__info_item">
+                            <span class="fit_product_basic__info_key">혼용률</span> :
+                            <span class="fit_product_basic__info_value">폴리100%</span>
+                            </div>
+                        
+                            <div class="fit_product_basic__info_item">
+                            <span class="fit_product_basic__info_key">제조국</span> :
+                            <span class="fit_product_basic__info_value">한국</span>
+                            </div>
+                        
+                            <div class="fit_product_basic__info_item">
+                            <span class="fit_product_basic__info_key">제조사</span> :
+                            <span class="fit_product_basic__info_value">저스트원협력업체</span>
+                            </div>
+                        
+                            <div class="fit_product_basic__info_item">
+                            <span class="fit_product_basic__info_key">AS책임자</span> :
+                            <span class="fit_product_basic__info_value">저스트원 1644-3662</span>
+                            </div>
+                        
+                            <div class="fit_product_basic__info_item">
+                            <span class="fit_product_basic__info_key">품질보증기준</span> :
+                            <span class="fit_product_basic__info_value">관련법 및 소비자분쟁해결기준에 따름</span>
+                            </div>
+                        
+                            <div class="fit_product_basic__info_item">
+                            <span class="fit_product_basic__info_key">세탁방법</span> :
+                            <span class="fit_product_basic__info_value">ONLY 드라이클리닝</span>
+                            </div>
+                        
+                            <div class="fit_product_basic__info_item">
+                            <span class="fit_product_basic__info_key">시즌</span> :
+                            <span class="fit_product_basic__info_value">가을,겨울</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="fit_product_basic__property">
+                        <div class="fit_product_basic__property_title">
+                            
+                                DETAIL INFO
+                            
+                            </div>
+                            <div class="fit_product_basic__property_content">
+                            <table class="fit_product_basic__property_table" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                
+                                    <tr class="fit_product_basic__property_table_content_row">
+                                    <td class="fit_product_basic__property_table_content_col fit_product_basic__property_key_container fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_key">
+                                        안감
+                                        </div>
+                                    </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value fit_product_basic__property_value--selected">
+                                            있음
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            없음
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            부분안감
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            
+                                        </div>
+                                        </td>
+                                    
+                                    </tr>
+                                
+                                    <tr class="fit_product_basic__property_table_content_row">
+                                    <td class="fit_product_basic__property_table_content_col fit_product_basic__property_key_container fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_key">
+                                        비침
+                                        </div>
+                                    </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            비침
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            약간
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value fit_product_basic__property_value--selected">
+                                            없음
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            밝은 컬러 비침 약간 있음
+                                        </div>
+                                        </td>
+                                    
+                                    </tr>
+                                
+                                    <tr class="fit_product_basic__property_table_content_row">
+                                    <td class="fit_product_basic__property_table_content_col fit_product_basic__property_key_container fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_key">
+                                        촉감
+                                        </div>
+                                    </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value fit_product_basic__property_value--selected">
+                                            부드러움
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            보통
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            까슬
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            
+                                        </div>
+                                        </td>
+                                    
+                                    </tr>
+                                
+                                    <tr class="fit_product_basic__property_table_content_row">
+                                    <td class="fit_product_basic__property_table_content_col fit_product_basic__property_key_container fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_key">
+                                        신축성
+                                        </div>
+                                    </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value fit_product_basic__property_value--selected">
+                                            좋음
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            보통
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            없음
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            
+                                        </div>
+                                        </td>
+                                    
+                                    </tr>
+                                
+                                    <tr class="fit_product_basic__property_table_content_row">
+                                    <td class="fit_product_basic__property_table_content_col fit_product_basic__property_key_container fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_key">
+                                        무게감
+                                        </div>
+                                    </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            무거움
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            보통
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value fit_product_basic__property_value--selected">
+                                            가벼움
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            
+                                        </div>
+                                        </td>
+                                    
+                                    </tr>
+                                
+                                    <tr class="fit_product_basic__property_table_content_row">
+                                    <td class="fit_product_basic__property_table_content_col fit_product_basic__property_key_container fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_key">
+                                        핏감
+                                        </div>
+                                    </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            슬림핏
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            보통
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value fit_product_basic__property_value--selected">
+                                            루즈핏
+                                        </div>
+                                        </td>
+                                    
+                                        <td class="fit_product_basic__property_table_content_col fit_product_basic__property_table_content_col--4cols">
+                                        <div class="fit_product_basic__property_value ">
+                                            
+                                        </div>
+                                        </td>
+                                    
+                                    </tr>
+                                
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    <div class="washing">
+                        <img src="./img/washing_tip_page.jpg" alt="">
+                    </div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="allinfo">
+                    <div class="3_info">
+                        <div class="info" id="info1">
+                            <div class="top_info" id="info121"><p>배송안내 <img src="./img/iconfinder_04-Arrow-direction-pointer-down_4510559.png" alt=""></p></div>
+                            
+                            <div class="content_info displaynone1">
+                                <p>
+                                    배송업체 : CJ대한통운(1588-1255)<br>
+                                                    배송지역 : 전국 (해외배송불가)<br>
+                                                    배송비용 : 2,500원 / 50,000원 이상 구매시 무료배송<br>
+                                                    배송기간 : 2일-7일(지연발생시 1-2주 소요)
+                                </p>
+                                <p>
+                                    - 주문일기준 3일 이상 발송이 지연된 경우 먼저 준비된 상품부터 선발송 해드립니다.<br>
+                                    - 부분배송을 원하지 않으시면 게시판이나 고객센터로 연락부탁드립니다.<br>
+                                    - 공급처 사정으로 인한 입고지연 및 품절이 발생할 수 있습니다.<br>
+                                    - 배송지연 및 품절시 개별연락드리겠습니다.<br>
+                                    - 슈즈, 잡화의 경우 물량확보 상황에 따라 일정 변동 및 추가 준비기간이 소요될 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info" id="info2">
+                            <div class="top_info" id="info122">
+                                <p>취소&환불안내<img src="./img/iconfinder_04-Arrow-direction-pointer-down_4510559.png" alt=""></p>
+                            </div>
+                            <div class="content_info displaynone2">
+                                <p >
+                                    - 주문결제 후 마이페이지 주문내역에서 취소신청가능합니다.<br>
+                                    - <b>[마이페이지 → 주문내역조회→ 주문상세 조회]</b>에서 취소&amp;변경 신청<br>
+                                    - 1:1게시판 또는 고객센터(1644-3662)로 연락주셔도 처리가능합니다.<br>
+                                    - 배송준비 상태인 경우 취소문의시 처리가능여부 확인후 안내드립니다.<br>
+                                    - 송장등록 연동이 지연되어 배송준비상태이더라도 출고된 상품은 취소환불이 어렵습니다.<br> 
+                                    - 배송전 변심으로 인한 부분취소시 5만원미만 인 경우 무료배송이 불가하여 초기배송비 2,500원이 차감됩니다.<br>
+                                    - 배송중,배송완료 상태에서는 취소&amp;변경이 불가능합니다.<br>
+                                    - 무통장주문 취소시 환불정보(은행,계좌번호,예금주)를 기재해주세요.<br>
+                                    - 휴대폰소액결제는 부분환불이나 익월취소가 불가능하여 통장으로 환불해드립니다.<br>
+                                    - 취소 신청 시, 환불정보(은행,계좌번호,예금주)를 기재해주시거나 1:1게시판 또는 고객센터로 문의바랍니다.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info" id="info3" >
+                            <div class="top_info" id="info123"><p>교환&반품안내<img id="down3" src="./img/iconfinder_04-Arrow-direction-pointer-down_4510559.png" alt=""></p></div>
+                            <div class="content_info displaynone3">
+                                <p id="#up3">
+                                                - 상품 수령 후 7일이내 교환/반품 신청 또는 게시판(Q＆A),고객센터(1644-3662)로 접수부탁드립니다.<br>
+                                                - 마이페이지 주문조회 상세에서 교환/반품 신청가능합니다.<br>
+                                                - 지정된 택배사 반품을 누르시면 CJ대한통운 으로 회수접수 가능합니다.<br>
+                                                - 단순교환 5,000원 / 일부반품 2,500원 / 전체반품 5,000원의 배송비가 부과됩니다.<br>
+                                                - 교환은 왕복배송비, 전체반품은 초기배송비가 환불되어 5,000원입니다.<br>
+                                                - 무료배송이벤트, 무료배송쿠폰 사용 후 반품시에도 초기배송비가 청구됩니다.<br>
+                                                - 타택배 이용고객님은 개별반품을 눌러주시고 타택배 선불로접수 후 반품주소로 보내주세요.<br>
+                                                - 타택배 착불 이용 시 고객부담입니다.<br>
+                                                - 교환&amp;반품 배송비 <b>입금계좌 : 우리은행 1005-302-421987 / 예금주 (주)제이오진</b>
+                                </p>
+                                <h4>[교환반품 불가항목]</h4>
+                                <p>
+                                                반품시일이 지난 경우<br>
+                                                소비자에게 책임있는 사유로 재화가 멸실 또는 훼손된 경우<br>
+                                                소비자의 사용 또는 소비에 의하여 재화의 가치가 현저히 감소한 경우<br>
+                                                시간의 경과에 의하여 재판매가 곤란할 정도로 재화의 가치가 현저히 감소한 경우<br>
+                                </p>
+                                <h4>[보내시는 곳]</h4>
+                                <p>
+                                                반품주소 : 경기 구리시 토평동 613-13 대한통운 광진지점 BSub 자양우리대리점저스트원)<br>
+                                                타택배시 : 서울 성동구 성수동2가 314-37 아연디지털타워 6층 저스트원<br>
+                                                <br>
+                                                AS책임자 : 저스트원 1644-3662<br>
+                                                품질보증기준 : 관련법 및 소비자분쟁해결기준에 따름
+                                </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-list ">
+                    <div class="item_rmc">
+                        <div class="item_rmcontrol">
+                            <a href="#up_info">상품 상세 정보</a>
+                        </div>
+                        <div class="item_rmcontrol ex" id="ex">
+                            <a href=""><span>상품 후기(<em>1111</em>)</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="re_view">
+                    <form action="" method="POST">
+                    <div class="input_review">
+                        <textarea name="re_view_ok" id="re_view_ok" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="re_view_btn">
+                        <div id="pic_view"><img src="./img/iconfinder_Camera_2742769.png" alt="사진 추가"><em>사진 추가하기 </em></div>
+                        <select class="box_item">
+                            <option selected="selected" value="5"> ★ ★ ★ ★ ★</option>
+                            <option value="4"> ★ ★ ★ ★</option>
+                            <option value="3"> ★ ★ ★</option>
+                            <option value="2"> ★ ★</option>
+                            <option value="1"> ★</option>
+                        </select>
+                        <input type="button" value="등록 하기">
+                    </div>
+                </form>
+                </div>
+            </div>
+        </main>
+        <div class="both"></div>
+    <footer>
+        <div id="footer">
+            <div class="footerTop">
+                <!-- CUSTOMER CENTER -->
+                <ul class="wrap1">
+                    <li class="tit">CUSTOMER CENTER</li>
+                    <li class="line"></li>
+                    <li class="num">1644-3662</li>
+                    <li class="fax">fax : 02-6969-5433</li>
+                    <li class="sub">MONDAY-FRIDAY 10:00 - 17:00</li>
+                    <li class="sub">LUNCH 13:00 - 14:00</li>
+                    <li class="sub">WEEKEND, HOLIDAY OFF</li>
+                    <li class="sub"></li>
+
+                </ul>
+                <!-- BANKING INFO -->
+                <ul class="wrap2">
+                    <li class="tit">BANKING INFO</li>
+                    <li class="line"></li>
+                    <li class="bank"><img src="img/kb_bk.gif"> 366901 - 04 - 153821</li>
+                    <li class="bank"><img src="img/nh_bk.gif"> 100056 - 55 - 005031</li>
+                    <li class="bank"><img src="img/wr_bk.gif"> 1005 - 302 - 421987</li>
+                    <li class="bank"><img src="http://img.just-one.co.kr/shopping_mall/mainimage/sh_bk.gif"> 100 - 032 - 135166</li>
+                    <li class="name">예금주 : (주)제이오진</li>
+        
+                    <li class="tit tit2">DELIVERY</li>
+                    <li class="line"></li>
+                    <!-- 대한통운-->
+                    <li class="sub_cj">CJ 대한통운 고객센터 1588 - 1255</li>
+                    <li class="btn"><a href="https://www.doortodoor.co.kr/parcel/pa_004.jsp" target="_blank"><img src="img/cj_t.gif"></a></li>
+                </ul>
+                <!-- BOARD -->
+                <ul class="wrap4">
+                    <li class="tit">ABOUT US</li>
+                    <li class="line"></li>
+                    <li class="sub">
+                        COMPANY : 주식회사 제이오진<br>
+                        OWNER : 윤은해<br>
+                        BUSINESS LICENSE : 204-86-00983 <a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank">사업자정보확인</a><br>
+                        MAIL ORDER LICENSE : 제2015-서울성동-0152호<br>
+                        ADRESS : 서울특별시 성동구 성수일로6길 33 6층 (성수동2가,아연디지털단지)<br>
+                        RETURN : 경기 구리시 토평동 613-13 대한통운  광진지점 BSub 자양우리대리점 (저스트원)<br>
+                        CHIEF PRIVACY OFFICER : 강대영 (온라인사업부)<br>
+                        MAIL : justone@justone.co.kr<br>
+                제휴문의 : office@justone.co.kr
+                    </li>
+                    <li class="footerSns">
+                        <a href="https://story.kakao.com/ch/justone" class="ic_ks" target="_blank">카카오스토리</a>
+                        <a href="https://www.facebook.com/pages/저스트원-justone/1444409975842330" class="ic_fb" target="_blank">페이스북</a>
+                        <a href="https://www.instagram.com/justone_korea/" class="ic_in" target="_blank">인스타그램</a>
+                        <a href="https://itunes.apple.com/kr/app/%EA%B8%B0%EB%B6%84%EC%A2%8B%EC%9D%80-%EB%A1%9C%EB%A7%A8%ED%8B%B1-%EC%BA%90%EC%A3%BC%EC%96%BC-%EC%97%AC%EC%84%B1%EC%9D%98%EB%A5%98-%EC%87%BC%ED%95%91%EB%AA%B0-%EC%A0%80%EC%8A%A4%ED%8A%B8%EC%9B%90/id897007279?l=en&amp;mt=8" class="ic_as" target="_blank">애플스토어</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.looket.justone&amp;hl=ko" class="ic_gs" target="_blank">구글스토어</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footerMiddle">
+                <ul>
+                    <li><a href="./shop/page.html?id=1">저스트원</a></li>
+                    <li><a href="javascript:view_join_terms();">이용약관</a></li>
+                    <li><a href="javascript:bottom_privacy();"><strong><span style="color:#2ba5ba">개인정보처리방침</span></strong></a></li>
+                    <li><a href="./shop/page.html?id=6">이용안내</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <ul class="icons cb_clear">
+                    <li><a><img src="http://img.just-one.co.kr/shopping_mall/mainimage/footer_img01.gif"></a></li>
+
+                    <li><a href="javascript:void(window.open('https://okbfex.kbstar.com/quics?e2eType=10&amp;page=C021590&amp;cc=b034066%3Ab035526&amp;mHValue=21a2c973051ccdf0479c5d435caf7980201006161630492','win0','width=775,height=662,status=no,toolbar=no,scrollbars=yes'))" target="_blank"><img src="./img/footer_img03.gif"></a></li>        
+                </ul>
+                <div class="copyright">
+                    (주)제이오진[저스트원] 상호와 이미지/사용문구/디자인은 저작권법 7233호에 의해 보호받고 있습니다. 모든 자료 도용 시 고발조치 후 법적책임을 물을 수 있습니다.<br>
+                    <a href="" style="cursor:default;">copyright(c) <b>justone.co.kr</b> all rights reserved.</a>
+                </div>   
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

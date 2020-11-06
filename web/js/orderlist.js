@@ -1,15 +1,6 @@
-///*
-//         * 구현할 기능
-//         * 1. 주문자 정보에서 이메일 입력불가 처리. 입력하려면 직접입력 선택해야만 하게.
-//         * 3. 주소 검색 api 연동
-//         * 4. 체크박스, 빈칸 검색하고 주문하기 버튼 클릭가능하게 처리
-//         * */
 
 
-//emailsel = 셀렉트 박스
-//emailbox = 이메일 입력 창
 function selectEmail(ele){
-    console.log("셀렉트이메일 실행");
     let $ele = $(ele);
     let $emailbox = $("#emailbox");
     $("select option[value='naver.com']").attr("selected", true);
@@ -22,15 +13,7 @@ function selectEmail(ele){
     }
 }
 
-//
-$("select#emailsel").change(function () {
-    let emailValue = $("#emailsel").val();
-    console.log(emailValue);
-    if (emailValue === 'direct') {
-        $('#direct').attr('readonly', false);
-        console.log("체인지됨");
-    }
-});
+
 
 
 //다음 우편번호 API

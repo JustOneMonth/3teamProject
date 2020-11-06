@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cf.css">
+    <link rel="stylesheet" href="./css/main_1.css">
+    <link rel="stylesheet" href="./css/style_1.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/best.css">
+    <script src="./jquery-3.5.1.min.js"></script>
+    <script src="./jq/bestjq.js"></script>
+    <script src="./jq/jq1.js"></script>
+    <script src="./jq/jqtest.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    
+
+
+</head>
+<body>
+    <header>
+        <div id="headerTop">
+            <!-- 로고 -->    
+            <h1 class="tlogo"><a href="./main.html">저스트원</a></h1>
+            <!-- //로고 -->
+            <!-- sns -->
+            <div class="hdShare">
+                <div id="langLink">
+                    <style>
+                        #langLink {position:relative; top:0; left:0;}
+                        .global_lang {cursor:pointer;}
+                        .global_lang_content {display:none; position:absolute; top:25px; left:0; z-index: 1000; background-color:#fff; border:1px solid #dbdbdb; padding:8px 5px 0 5px;}
+                        .global_lang_content li {float:none!important; }
+                        .global_lang_content li a {background:none!important; text-indent:0!important; width:auto!important;}
+                        .global_lang_content li a img {margin-right:7px;}
+                    </style>
+                    <script>
+                        $(function(){
+                            $(".global_lang").click(function(){
+                                // var _this = $(this);
+                                $(".global_lang_content").slideToggle('fast', function(){
+                                    if ( $(this).is(':visible'))
+                                    {
+                                        $(".global_lang span").text('▲');
+                                    }else{
+                                        $(".global_lang span").text('▼');	
+                                    }	
+                                });
+                            });
+                        });
+                    </script>
+
+                    <div class="global_lang">Global <span>▼</span></div>	
+                    <ul class="global_lang_content">
+                        <li class="lang"><a href="//justone.co.kr/" target="_blank"><img src="http://en.justone.co.kr/Common/img/lang_icon_KR.gif"></a></li>
+                        <li class="lang"><a href="//www.justonemall.jp"><img src="http://en.justone.co.kr/Common/img/lang_icon_JP.gif"></a></li>
+                        <li class="lang"><a href="//en.justone.co.kr"><img src="http://en.justone.co.kr/Common/img/lang_icon_EN.gif"></a></li>
+                        <li class="lang"><a href="//cn.justone.co.kr"><img src="http://en.justone.co.kr/Common/img/lang_icon_CN.gif"></a></li>
+                        <li class="lang"><a href="//www.justonemall.tw"><img src="http://en.justone.co.kr/Common/img/lang_icon_TW.gif"></a></li>
+                    </ul>
+                </div>
+
+                    <li><a href="javascript:CreateBookmarkLink('http://www.justone.co.kr', '여성의류 쇼핑몰 저스트원!!');" class="ic_bm" target="_blank">즐겨찾기</a></li>
+                    <li><a href="https://story.kakao.com/ch/justone" class="ic_ks" target="_blank">카카오스토리</a></li>
+
+                    <li><a href="https://www.instagram.com/justone_korea/" class="ic_in" target="_blank">인스타그램</a></li>
+                    <li><a href="https://itunes.apple.com/kr/app/%EA%B8%B0%EB%B6%84%EC%A2%8B%EC%9D%80-%EB%A1%9C%EB%A7%A8%ED%8B%B1-%EC%BA%90%EC%A3%BC%EC%96%BC-%EC%97%AC%EC%84%B1%EC%9D%98%EB%A5%98-%EC%87%BC%ED%95%91%EB%AA%B0-%EC%A0%80%EC%8A%A4%ED%8A%B8%EC%9B%90/id897007279?l=en&amp;mt=8" class="ic_as" target="_blank">애플스토어</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.looket.justone&amp;hl=ko" class="ic_gs" target="_blank">구글스토어</a></li>
+                
+            </div>
+            <!-- //sns -->
+            <!-- 회원가입/로그인 -->
+            <div class="hdGnb">
+                <ul>
+                    <!--li><a href="http://www.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_KR.gif"></a></li>
+                    <li><a href="http://en.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_EN.gif"></a></li>
+                    <li><a href="http://cn.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_CN.gif"></a></li>
+                    <li><a href="http://jp.justone.co.kr/"><img src="http://justone.globimg.com/lang_icon_JP.gif"></a></li-->
+                                    <li class="hdJoin"><a href="./rgist_simpel.html">회원가입</a><span class="bonus"></span></li>
+                    <li><a href="./login.html">로그인</a></li>
+                                    <li><a href="./shop/basket.html">장바구니(<span id="user_basket_quantity" class="user_basket_quantity">0</span>)</a></li>
+                    <li class="off"><a href="https://www.justone.co.kr/shop/confirm_login.html?type=myorder">주문조회</a></li>
+                    <li><a href="https://www.justone.co.kr/shop/member.html?type=mynewmain">마이페이지</a></li>
+                    <li class="off"><a href="./board/board.html?code=jojean_board12">리뷰보기</a></li>
+                    <li><a href="./shop/faq.html">고객센터</a></li>
+                </ul>
+            </div>
+            <!-- //회원가입/로그인 -->
+
+            
+        </div>
+        <div id="headerNavWrap">
+            <div id="headerNavArea" class="">
+                <div class="headerNav">
+                    <div id="allCateArea">
+                    
+                        <div class="fixLogo"><a href="./index.html"><img src="./design/jojean/phps/common/tlogo.png"></a></div>
+                    <!-- 상단 메뉴 -->
+                    <div class="navArea subListWrap">
+                        <ul>
+                            <li><a href="best.html">BEST20</a></li>    
+                            <li><a href="./OUTER.html" vaule="1">OUTER</a>    
+                                <p><a href="./OUTER.html">자켓</a><a href="./OUTER.html">가디건</a><a href="./OUTER.html">코트</a><a href="./OUTER.html">집업/점퍼</a><a href="./OUTER.html">패딩</a></p>
+                                </li>
+                            <li><a href="./PANTS.html"vaule="2">PANTS</a>    
+                                <p><a href="./PANTS.html">청바지</a><a href="./PANTS.html">슬랙스</a><a href="./PANTS.html">면바지</a><a href="./PANTS.html">짧은바지</a></p>
+                                </li>
+                            <li><a href="./OPS.html"vaule="3">OPS/SKIRT</a>
+                                <p><a href="./OPS.html">원피스</a><a href="./OPS.html">스커트</a><a href="./OPS.html">치마바지</a></p></li>
+                            <li><a href="./CARDIGAN.html"vaule="4">KNIT/CARDIGAN</a>
+                                <p><a href="./CARDIGAN.html">니트</a><a href="./CARDIGAN.html">가디건</a><a href="./CARDIGAN.html">조끼</a></p></li>
+                            <li><a href="./SHOES.html"vaule="5">BAG/SHOES/ACC</a>
+                                <p><a href="./SHOES.html">신발</a><a href="./SHOES.html">가방</a><a href="./SHOES.html">머플러/스카프</a><a href="./SHOES.html">모자</a>
+                                    <a href="./SHOES.html">주얼리</a><a href="./SHOES.html">기타</a></p></li>
+                            <li><a href="./LEGGINGS.html"vaule="6">LEGGINGS/SOCKS</a>
+                                <p><a href="./LEGGINGS.html">레깅스/스타킹</a><a href="./LEGGINGS.html">삭스</a><a href="./LEGGINGS.html">이너웨어</a><p>
+                                </li>
+                            <li class="search_wrap last">
+                                <div class="search sch">
+                                    <form action="./shop/shopbrand.html" method="post" name="search" autocomplete="off">                                <fieldset>
+                                        <legend>상품 검색 폼</legend>
+                                        <input name="search" onkeydown="CheckKey_search();" value="" class="MS_search_word">                                    <a href="javascript:search_submit();" class="schBtn"><img src="./img/header_sch_btn.jpg"></a>
+                                    </fieldset>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    <!-- //상단 메뉴 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </header>
+    <main>
+        <div id="top_menu">
+        <p>LEGGINGS/SOCKS</p>
+        </div>
+        <ul id="Shortcuts">
+            <li class="Shortcuts_btn " value="0">NEW10%</li>
+            <li class="Shortcuts_btn " value="1">레깅스/스타킹</li>
+            <li class="Shortcuts_btn " value="2">삭스</li>
+            <li class="Shortcuts_btn " value="3">이너웨어</li>
+        </ul>
+        <div class="bestbox_top20">
+        </div>
+    </main>
+    <footer>
+        <div id="footer">
+            <div class="footerTop">
+                <!-- CUSTOMER CENTER -->
+                <ul class="wrap1">
+                    <li class="tit">CUSTOMER CENTER</li>
+                    <li class="line"></li>
+                    <li class="num">1644-3662</li>
+                    <li class="fax">fax : 02-6969-5433</li>
+                    <li class="sub">MONDAY-FRIDAY 10:00 - 17:00</li>
+                    <li class="sub">LUNCH 13:00 - 14:00</li>
+                    <li class="sub">WEEKEND, HOLIDAY OFF</li>
+                    <li class="sub"></li>
+                    <!--네이버 카카오상담톡-->
+                    <!--  <li class="btn"><img style="cursor:pointer;" src="img/btn_naver.gif" onclick="javascript:void(window.open('https://talk.naver.com/ct/wcb2pb','win0','width=775,height=662,status=no,toolbar=no,scrollbars=yes'))">
+                    <img style="cursor:pointer;" src="img/btn_kakao.gif" onclick="javascript:void(window.open('https://lc-api.lunasoft.co.kr/lunachat/api-connect/@justone/main/no_gid','win0','width=1024,height=800,status=no,toolbar=no,scrollbars=yes'))"></li> -->
+                </ul>
+                <!-- BANKING INFO -->
+                <ul class="wrap2">
+                    <li class="tit">BANKING INFO</li>
+                    <li class="line"></li>
+                    <li class="bank"><img src="img/kb_bk.gif"> 366901 - 04 - 153821</li>
+                    <li class="bank"><img src="img/nh_bk.gif"> 100056 - 55 - 005031</li>
+                    <li class="bank"><img src="img/wr_bk.gif"> 1005 - 302 - 421987</li>
+                    <li class="bank"><img src="http://img.just-one.co.kr/shopping_mall/mainimage/sh_bk.gif"> 100 - 032 - 135166</li>
+                    <li class="name">예금주 : (주)제이오진</li>
+        
+                    <li class="tit tit2">DELIVERY</li>
+                    <li class="line"></li>
+                    <!-- 대한통운-->
+                    <li class="sub_cj">CJ 대한통운 고객센터 1588 - 1255</li>
+                    <li class="btn"><a href="https://www.doortodoor.co.kr/parcel/pa_004.jsp" target="_blank"><img src="img/cj_t.gif"></a></li>
+                </ul>
+                <!-- BOARD -->
+                <ul class="wrap4">
+                    <li class="tit">ABOUT US</li>
+                    <li class="line"></li>
+                    <li class="sub">
+                        COMPANY : 주식회사 제이오진<br>
+                        OWNER : 윤은해<br>
+                        BUSINESS LICENSE : 204-86-00983 <a href="http://www.ftc.go.kr/info/bizinfo/communicationList.jsp" target="_blank">사업자정보확인</a><br>
+                        MAIL ORDER LICENSE : 제2015-서울성동-0152호<br>
+                        ADRESS : 서울특별시 성동구 성수일로6길 33 6층 (성수동2가,아연디지털단지)<br>
+                        RETURN : 경기 구리시 토평동 613-13 대한통운  광진지점 BSub 자양우리대리점 (저스트원)<br>
+                        CHIEF PRIVACY OFFICER : 강대영 (온라인사업부)<br>
+                        MAIL : justone@justone.co.kr<br>
+                제휴문의 : office@justone.co.kr
+                    </li>
+                    <li class="footerSns">
+                        <a href="https://story.kakao.com/ch/justone" class="ic_ks" target="_blank">카카오스토리</a>
+                        <a href="https://www.facebook.com/pages/저스트원-justone/1444409975842330" class="ic_fb" target="_blank">페이스북</a>
+                        <a href="https://www.instagram.com/justone_korea/" class="ic_in" target="_blank">인스타그램</a>
+                        <a href="https://itunes.apple.com/kr/app/%EA%B8%B0%EB%B6%84%EC%A2%8B%EC%9D%80-%EB%A1%9C%EB%A7%A8%ED%8B%B1-%EC%BA%90%EC%A3%BC%EC%96%BC-%EC%97%AC%EC%84%B1%EC%9D%98%EB%A5%98-%EC%87%BC%ED%95%91%EB%AA%B0-%EC%A0%80%EC%8A%A4%ED%8A%B8%EC%9B%90/id897007279?l=en&amp;mt=8" class="ic_as" target="_blank">애플스토어</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.looket.justone&amp;hl=ko" class="ic_gs" target="_blank">구글스토어</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footerMiddle">
+                <ul>
+                    <li><a href="./shop/page.html?id=1">저스트원</a></li>
+                    <li><a href="javascript:view_join_terms();">이용약관</a></li>
+                    <li><a href="javascript:bottom_privacy();"><strong><span style="color:#2ba5ba">개인정보처리방침</span></strong></a></li>
+                    <li><a href="./shop/page.html?id=6">이용안내</a></li>
+                </ul>
+            </div>
+            <div class="footerBottom">
+                <ul class="icons cb_clear">
+                    <li><a><img src="http://img.just-one.co.kr/shopping_mall/mainimage/footer_img01.gif"></a></li>
+                    <!-- <li><a href="http://www.freechk.com/index/check/justone" target="_blank"><img src="./design/jojean/smartpc/img/footer_img02.gif"></a></li>-->
+                    <!-- <li><a href="https://goods.codes/justone" target="_blank"><img src="http://img.just-one.co.kr/shopping_mall/home2017/etc/footer_img04.gif"></a></li> -->
+                    <li><a href="javascript:void(window.open('https://okbfex.kbstar.com/quics?e2eType=10&amp;page=C021590&amp;cc=b034066%3Ab035526&amp;mHValue=21a2c973051ccdf0479c5d435caf7980201006161630492','win0','width=775,height=662,status=no,toolbar=no,scrollbars=yes'))" target="_blank"><img src="./img/footer_img03.gif"></a></li>        
+                </ul>
+                <div class="copyright">
+                    (주)제이오진[저스트원] 상호와 이미지/사용문구/디자인은 저작권법 7233호에 의해 보호받고 있습니다. 모든 자료 도용 시 고발조치 후 법적책임을 물을 수 있습니다.<br>
+                    <a href="" style="cursor:default;">copyright(c) <b>justone.co.kr</b> all rights reserved.</a>
+                </div>   
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
